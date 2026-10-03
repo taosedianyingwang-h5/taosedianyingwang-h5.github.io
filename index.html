@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桃色电影网 - 海量高清影视在线观看首选平台</title>
+<meta name="description" content="桃色电影网（taosedianyingwang-h5.github.io）提供海量高清电影、热播剧集、综艺动漫在线观看。每日更新，分类清晰，免费畅享精彩影视内容，尽在桃色电影网。">
+<meta name="keywords" content="桃色电影网, 高清电影, 在线观看, 影视资源, 热播剧集">
+<meta name="author" content="桃色电影网">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1a0b2e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="桃色电影网 - 海量高清影视在线观看首选平台">
+<meta property="og:description" content="桃色电影网提供海量高清电影、热播剧集、综艺动漫在线观看，每日更新，免费畅享。">
+<meta property="og:url" content="https://taosedianyingwang-h5.github.io">
+<meta property="og:site_name" content="桃色电影网">
+<link rel="canonical" href="https://taosedianyingwang-h5.github.io">
+<link rel="alternate" hreflang="zh-CN" href="https://taosedianyingwang-h5.github.io">
+
+<!-- Bing / Schema.org 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "桃色电影网",
+  "url": "https://taosedianyingwang-h5.github.io",
+  "description": "海量高清电影、热播剧集、综艺动漫在线观看平台",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://taosedianyingwang-h5.github.io#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "桃色电影网提供哪些影视内容？",
+      "acceptedAnswer": { "@type": "Answer", "text": "桃色电影网提供海量高清电影、热播剧集、综艺动漫等丰富影视内容，每日更新，分类清晰。" }
+    },
+    {
+      "@type": "Question",
+      "name": "桃色电影网的资源是否免费？",
+      "acceptedAnswer": { "@type": "Answer", "text": "是的，桃色电影网所有影视资源均可免费在线观看，无需付费。" }
+    },
+    {
+      "@type": "Question",
+      "name": "桃色电影网支持哪些设备观看？",
+      "acceptedAnswer": { "@type": "Answer", "text": "桃色电影网采用移动端自适应设计，支持手机、平板、电脑等多终端流畅观看。" }
+    },
+    {
+      "@type": "Question",
+      "name": "桃色电影网的网址是什么？",
+      "acceptedAnswer": { "@type": "Answer", "text": "桃色电影网的官方网址是 https://taosedianyingwang-h5.github.io，欢迎收藏访问。" }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============ Reset & Base ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color:#f0e6f5;line-height:1.7;
+  background:#0d0015;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ============ 霓虹渐变主题 ============ */
+:root{
+  --purple:#7b2ff7;--pink:#ff2d95;--cyan:#00e5ff;
+  --gold:#ffd54f;--bg:#0d0015;--card:#1a0b2e;--card2:#241040;
+}
+body{
+  background:
+    radial-gradient(1200px 600px at 15% -10%,rgba(123,47,247,.45),transparent 60%),
+    radial-gradient(900px 500px at 85% 10%,rgba(255,45,149,.35),transparent 60%),
+    linear-gradient(180deg,#0d0015 0%,#150525 50%,#0d0015 100%);
+  background-attachment:fixed;
+}
+.glow-text{
+  background:linear-gradient(90deg,var(--pink),var(--purple),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 18px rgba(255,45,149,.35));
+}
+
+/* ============ 顶部导航 ============ */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  background:rgba(13,0,21,.78);
+  border-bottom:1px solid rgba(123,47,247,.35);
+}
+.nav-wrap{
+  max-width:1160px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.logo{font-size:1.5rem;font-weight:800;letter-spacing:.5px}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap}
+.nav-links a{
+  padding:8px 14px;border-radius:22px;font-size:.92rem;font-weight:600;
+  transition:.25s;white-space:nowrap;
+}
+.nav-links a:hover{background:linear-gradient(90deg,var(--purple),var(--pink));color:#fff;transform:translateY(-2px)}
+.menu-btn{display:none;background:none;border:2px solid var(--purple);color:#fff;border-radius:10px;padding:6px 10px;font-size:1.3rem;cursor:pointer}
+
+/* ============ 通用容器与标题 ============ */
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head h2{font-size:2rem;font-weight:800;margin-bottom:10px}
+.sec-head p{color:#c9b8e0;font-size:1rem}
+.divider{width:70px;height:4px;margin:14px auto 0;border-radius:4px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--cyan))}
+
+/* ============ Hero ============ */
+.hero{
+  min-height:88vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:80px 20px;position:relative;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 45%,rgba(0,229,255,.12),transparent 55%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:820px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.25;margin-bottom:20px}
+.hero .lead{font-size:clamp(1rem,2vw,1.25rem);color:#e2d3f0;margin-bottom:32px}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:14px 34px;border-radius:40px;font-weight:700;font-size:1rem;
+  transition:.3s;border:2px solid transparent;cursor:pointer;
+}
+.btn-primary{background:linear-gradient(90deg,var(--purple),var(--pink));color:#fff;box-shadow:0 8px 26px rgba(255,45,149,.4)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 34px rgba(255,45,149,.55)}
+.btn-ghost{border-color:var(--cyan);color:var(--cyan)}
+.btn-ghost:hover{background:var(--cyan);color:#0d0015}
+
+/* ============ 栏目卡片（首屏特色） ============ */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.feat-card{
+  background:linear-gradient(160deg,var(--card2),var(--card));
+  border:1px solid rgba(123,47,247,.3);border-radius:20px;padding:30px 22px;
+  text-align:center;transition:.3s;
+}
+.feat-card:hover{transform:translateY(-8px);border-color:var(--pink);box-shadow:0 16px 40px rgba(123,47,247,.35)}
+.feat-icon{font-size:2.6rem;margin-bottom:14px;display:block}
+.feat-card h3{font-size:1.15rem;margin-bottom:10px;color:#fff}
+.feat-card p{font-size:.9rem;color:#bfaed8}
+
+/* ============ 栏目一：电影库 ============ */
+.movie-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.poster{
+  position:relative;border-radius:16px;overflow:hidden;aspect-ratio:2/3;
+  background:var(--card2);border:1px solid rgba(255,255,255,.08);
+}
+.poster .thumb{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--c1,#7b2ff7),var(--c2,#ff2d95));
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.4rem;font-weight:900;color:rgba(255,255,255,.9);
+  text-shadow:0 4px 14px rgba(0,0,0,.35);
+}
+.poster .info{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 14px;
+  background:linear-gradient(0deg,rgba(0,0,0,.92),transparent);}
+.poster .info h3{font-size:.98rem;margin-bottom:4px}
+.poster .info span{font-size:.78rem;color:var(--gold)}
+.poster .tag{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.55);
+  color:var(--cyan);font-size:.72rem;padding:3px 10px;border-radius:20px;backdrop-filter:blur(4px)}
+.poster:hover .thumb{transform:scale(1.08);transition:.5s}
+
+/* ============ 栏目二：电视剧 ============ */
+.drama-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.drama-row{
+  display:flex;gap:16px;align-items:center;
+  background:rgba(36,16,64,.6);border:1px solid rgba(0,229,255,.2);
+  border-radius:16px;padding:16px;transition:.3s;
+}
+.drama-row:hover{border-color:var(--cyan);background:rgba(36,16,64,.9);transform:translateX(6px)}
+.drama-num{
+  flex:0 0 52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,var(--purple),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;font-weight:900;color:#fff;
+}
+.drama-row h3{font-size:1.02rem;margin-bottom:4px}
+.drama-row p{font-size:.82rem;color:#b39ddb}
+.stars{color:var(--gold);font-size:.82rem;margin-top:5px}
+
+/* ============ 栏目三：综艺动漫 ============ */
+.show-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.show-tabs button{
+  padding:10px 26px;border-radius:30px;border:1px solid var(--purple);
+  background:transparent;color:#e2d3f0;font-weight:600;cursor:pointer;font-size:.95rem;transition:.25s;
+}
+.show-tabs button.active,.show-tabs button:hover{background:linear-gradient(90deg,var(--purple),var(--pink));color:#fff;border-color:transparent}
+.show-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.show-item{
+  display:grid;grid-template-columns:120px 1fr;gap:16px;
+  background:linear-gradient(140deg,var(--card),var(--card2));
+  border-radius:16px;padding:14px;align-items:center;transition:.3s;
+  border:1px solid rgba(255,255,255,.06);
+}
+.show-item:hover{border-color:var(--gold);transform:scale(1.02)}
+.show-cover{
+  height:90px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--c1,#ff2d95),var(--c2,#ffd54f));
+}
+.show-item h3{font-size:1rem;margin-bottom:6px}
+.show-item p{font-size:.82rem;color:#bfaed8}
+
+/* ============ 栏目四：排行榜 ============ */
+.rank-table{width:100%;border-collapse:collapse;background:rgba(26,11,46,.8);
+  border-radius:18px;overflow:hidden;border:1px solid rgba(123,47,247,.3)}
+.rank-table th,.rank-table td{padding:16px 18px;text-align:left;font-size:.95rem}
+.rank-table thead th{
+  background:linear-gradient(90deg,var(--purple),var(--pink));
+  color:#fff;font-weight:700;letter-spacing:.5px;
+}
+.rank-table tbody tr{border-top:1px solid rgba(255,255,255,.07);transition:.2s}
+.rank-table tbody tr:hover{background:rgba(123,47,247,.15)}
+.rank-no{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;
+  font-weight:800;color:#fff;background:linear-gradient(135deg,#4a148c,#7b2ff7)}
+.rank-no.top{background:linear-gradient(135deg,var(--gold),var(--pink))}
+.rank-table .score{color:var(--gold);font-weight:700}
+
+/* ============ 栏目五：关于 / 资讯 ============ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-text h2{font-size:2rem;font-weight:800;margin-bottom:16px}
+.about-text p{color:#d6c6ea;margin-bottom:14px}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.stat-box{text-align:center;background:rgba(123,47,247,.18);border-radius:16px;padding:22px 10px;border:1px solid rgba(123,47,247,.3)}
+.stat-box b{display:block;font-size:1.9rem;font-weight:900;color:var(--cyan)}
+.stat-box span{font-size:.85rem;color:#c9b8e0}
+.about-visual{
+  border-radius:24px;padding:40px;min-height:320px;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(0,229,255,.25),transparent 45%),
+    radial-gradient(circle at 80% 70%,rgba(255,45,149,.3),transparent 45%),
+    linear-gradient(160deg,var(--card2),var(--card));
+  display:flex;flex-direction:column;justify-content:center;gap:18px;
+  border:1px solid rgba(0,229,255,.25);
+}
+.about-visual .q{font-size:1.05rem;color:#f0e6f5;padding-left:18px;border-left:3px solid var(--cyan)}
+
+/* ============ 栏目六：常见问题 ============ */
+.faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:rgba(36,16,64,.7);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:20px 24px;background:none;border:none;color:#fff;
+  font-size:1.02rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q .ic{color:var(--pink);font-size:1.4rem;transition:.3s;flex:0 0 auto}
+.faq-item.open .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:.4s ease;padding:0 24px}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 22px}
+.faq-a p{color:#c9b8e0;font-size:.94rem}
+
+/* ============ 页脚 ============ */
+.site-footer{background:#08000f;border-top:1px solid rgba(123,47,247,.3);padding:50px 20px 30px}
+.foot-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot-wrap h4{color:var(--cyan);font-size:1rem;margin-bottom:14px}
+.foot-wrap ul{display:flex;flex-direction:column;gap:8px}
+.foot-wrap a{color:#bfaed8;font-size:.9rem;transition:.2s}
+.foot-wrap a:hover{color:var(--pink)}
+.foot-brand .logo{font-size:1.4rem;margin-bottom:12px;display:inline-block}
+.foot-brand p{color:#8f7cab;font-size:.88rem}
+.copyright{max-width:1160px;margin:34px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;color:#7a6894;font-size:.85rem}
+
+/* ============ 返回顶部 ============ */
+.top-btn{
+  position:fixed;right:20px;bottom:24px;z-index:99;
+  width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;font-size:1.3rem;
+  box-shadow:0 6px 20px rgba(123,47,247,.5);opacity:0;visibility:hidden;transition:.3s;
+}
+.top-btn.show{opacity:1;visibility:visible}
+.top-btn:hover{transform:translateY(-4px)}
+
+/* ============ 响应式 ============ */
+@media(max-width:900px){
+  .grid-4,.movie-grid{grid-template-columns:repeat(2,1fr)}
+  .drama-wrap{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .show-list{grid-template-columns:1fr}
+  .foot-wrap{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .menu-btn{display:block}
+  .nav-links{
+    position:fixed;top:62px;left:0;right:0;flex-direction:column;
+    background:rgba(13,0,21,.97);padding:18px;text-align:center;
+    border-bottom:1px solid rgba(123,47,247,.4);
+    transform:translateY(-150%);transition:.35s;
+  }
+  .nav-links.open{transform:translateY(0)}
+  .section{padding:54px 0}
+  .sec-head h2{font-size:1.55rem}
+  .grid-4,.movie-grid{grid-template-columns:1fr}
+  .foot-wrap{grid-template-columns:1fr}
+  .show-item{grid-template-columns:90px 1fr}
+  .rank-table th:nth-child(3),.rank-table td:nth-child(3){display:none}
+  .rank-table th,.rank-table td{padding:12px 10px;font-size:.85rem}
+  .hero{min-height:70vh}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="#top" class="logo glow-text">桃色电影网</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">首页</a>
+      <a href="#movies">电影库</a>
+      <a href="#dramas">电视剧</a>
+      <a href="#shows">综艺动漫</a>
+      <a href="#rank">热播排行</a>
+      <a href="#about">关于我们</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <h1 class="glow-text">桃色电影网 · 海量高清影视 一站畅看</h1>
+    <p class="lead">桃色电影网汇聚最新电影、热播剧集、精彩综艺与热门动漫，每日更新、分类清晰、免费畅享，让您随时随地沉浸在优质影视世界中。</p>
+    <div class="hero-btns">
+      <a href="#movies" class="btn btn-primary">立即观影</a>
+      <a href="#rank" class="btn btn-ghost">查看排行榜</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目：平台特色 ================= -->
+<section class="section" id="home">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">为什么选择桃色电影网</h2>
+      <div class="divider"></div>
+      <p>四大核心优势，打造极致在线观影体验</p>
+    </div>
+    <div class="grid-4">
+      <div class="feat-card">
+        <span class="feat-icon">🎬</span>
+        <h3>片库海量</h3>
+        <p>桃色电影网收录上万部影视资源，覆盖各类题材与年代，想看的全都有。</p>
+        <a href="#movies" style="color:var(--cyan);font-size:.85rem;display:inline-block;margin-top:12px">浏览电影 →</a>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">⚡</span>
+        <h3>极速播放</h3>
+        <p>全站采用高效播放技术，秒开即播、流畅不卡顿，支持多清晰度切换。</p>
+        <a href="#dramas" style="color:var(--cyan);font-size:.85rem;display:inline-block;margin-top:12px">热门剧集 →</a>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">📱</span>
+        <h3>多端自适应</h3>
+        <p>手机、平板、电脑完美适配，移动端自适应布局，随时随地想看就看。</p>
+        <a href="#about" style="color:var(--cyan);font-size:.85rem;display:inline-block;margin-top:12px">了解更多 →</a>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">🔔</span>
+        <h3>每日更新</h3>
+        <p>桃色电影网紧跟院线与卫视，每日更新最新资源，热门内容不错过。</p>
+        <a href="#shows" style="color:var(--cyan);font-size:.85rem;display:inline-block;margin-top:12px">综艺动漫 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目一：电影库 ================= -->
+<section class="section" id="movies" style="background:rgba(13,0,21,.4)">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">电影库</h2>
+      <div class="divider"></div>
+      <p>桃色电影网精选高分大片，总有一部适合你</p>
+    </div>
+    <div class="movie-grid">
+      <article class="poster" style="--c1:#7b2ff7;--c2:#00e5ff">
+        <div class="thumb">星海迷踪</div>
+        <span class="tag">科幻</span>
+        <div class="info"><h3>星海迷踪</h3><span>9.2 · 2025</span></div>
+      </article>
+      <article class="poster" style="--c1:#ff2d95;--c2:#ffd54f">
+        <div class="thumb">都市情缘</div>
+        <span class="tag">爱情</span>
+        <div class="info"><h3>都市情缘</h3><span>8.7 · 2025</span></div>
+      </article>
+      <article class="poster" style="--c1:#00bcd4;--c2:#7b2ff7">
+        <div class="thumb">暗夜追凶</div>
+        <span class="tag">悬疑</span>
+        <div class="info"><h3>暗夜追凶</h3><span>9.0 · 2024</span></div>
+      </article>
+      <article class="poster" style="--c1:#ff7043;--c2:#ff2d95">
+        <div class="thumb">烈火战魂</div>
+        <span class="tag">动作</span>
+        <div class="info"><h3>烈火战魂</h3><span>8.5 · 2025</span></div>
+      </article>
+      <article class="poster" style="--c1:#4caf50;--c2:#00e5ff">
+        <div class="thumb">奇幻森林</div>
+        <span class="tag">动画</span>
+        <div class="info"><h3>奇幻森林</h3><span>8.9 · 2024</span></div>
+      </article>
+      <article class="poster" style="--c1:#9c27b0;--c2:#ff7043">
+        <div class="thumb">时光旅人</div>
+        <span class="tag">剧情</span>
+        <div class="info"><h3>时光旅人</h3><span>9.1 · 2025</span></div>
+      </article>
+      <article class="poster" style="--c1:#00e5ff;--c2:#4caf50">
+        <div class="thumb">深海探险</div>
+        <span class="tag">冒险</span>
+        <div class="info"><h3>深海探险</h3><span>8.6 · 2024</span></div>
+      </article>
+      <article class="poster" style="--c1:#ffd54f;--c2:#ff2d95">
+        <div class="thumb">笑傲江湖</div>
+        <span class="tag">喜剧</span>
+        <div class="info"><h3>笑傲江湖</h3><span>8.8 · 2025</span></div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a href="#" class="btn btn-ghost">查看更多电影</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目二：电视剧 ================= -->
+<section class="section" id="dramas">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">热播电视剧</h2>
+      <div class="divider"></div>
+      <p>桃色电影网持续更新全网热播剧集，追剧不等待</p>
+    </div>
+    <div class="drama-wrap">
+      <div class="drama-row">
+        <div class="drama-num">1</div>
+        <div>
+          <h3>长风破浪</h3>
+          <p>古装 · 权谋 · 45集全</p>
+          <div class="stars">★ ★ ★ ★ ★ 9.4</div>
+        </div>
+      </div>
+      <div class="drama-row">
+        <div class="drama-num">2</div>
+        <div>
+          <h3>城市边缘</h3>
+          <p>都市 · 情感 · 更新至32集</p>
+          <div class="stars">★ ★ ★ ★ ☆ 8.6</div>
+        </div>
+      </div>
+      <div class="drama-row">
+        <div class="drama-num">3</div>
+        <div>
+          <h3>法医密档</h3>
+          <p>悬疑 · 犯罪 · 24集全</p>
+          <div class="stars">★ ★ ★ ★ ★ 9.0</div>
+        </div>
+      </div>
+      <div class="drama-row">
+        <div class="drama-num">4</div>
+        <div>
+          <h3>青春方程式</h3>
+          <p>校园 · 青春 · 更新至20集</p>
+          <div class="stars">★ ★ ★ ★ ☆ 8.3</div>
+        </div>
+      </div>
+      <div class="drama-row">
+        <div class="drama-num">5</div>
+        <div>
+          <h3>锦绣山河</h3>
+          <p>历史 · 正剧 · 60集全</p>
+          <div class="stars">★ ★ ★ ★ ★ 9.3</div>
+        </div>
+      </div>
+      <div class="drama-row">
+        <div class="drama-num">6</div>
+        <div>
+          <h3>深夜食堂</h3>
+          <p>温情 · 单元剧 · 36集全</p>
+          <div class="stars">★ ★ ★ ★ ☆ 8.7</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a href="#" class="btn btn-primary">进入剧集专区</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目三：综艺动漫 ================= -->
+<section class="section" id="shows" style="background:rgba(13,0,21,.4)">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">综艺 · 动漫</h2>
+      <div class="divider"></div>
+      <p>精彩综艺与热门动漫，尽在桃色电影网</p>
+    </div>
+    <div class="show-tabs" role="tablist">
+      <button class="active" data-tab="all">全部</button>
+      <button data-tab="variety">综艺</button>
+      <button data-tab="anime">动漫</button>
+      <button data-tab="doc">纪录片</button>
+    </div>
+    <div class="show-list">
+      <div class="show-item" data-cat="variety">
+        <div class="show-cover" style="--c1:#ff2d95;--c2:#ffd54f">综</div>
+        <div><h3>欢乐大挑战</h3><p>爆笑游戏竞技，明星嘉宾齐聚，每周准时更新。</p></div>
+      </div>
+      <div class="show-item" data-cat="anime">
+        <div class="show-cover" style="--c1:#7b2ff7;--c2:#00e5ff">漫</div>
+        <div><h3>灵域奇谭</h3><p>东方玄幻动画大作，精美制作，剧情跌宕起伏。</p></div>
+      </div>
+      <div class="show-item" data-cat="variety">
+        <div class="show-cover" style="--c1:#00bcd4;--c2:#4caf50">综</div>
+        <div><h3>舌尖上的旅行</h3><p>走遍大江南北，探寻地道美食与人文风情。</p></div>
+      </div>
+      <div class="show-item" data-cat="anime">
+        <div class="show-cover" style="--c1:#ff7043;--c2:#9c27b0">漫</div>
+        <div><h3>机甲战纪</h3><p>热血机甲题材，少年热血与宏大世界观并存。</p></div>
+      </div>
+      <div class="show-item" data-cat="doc">
+        <div class="show-cover" style="--c1:#00e5ff;--c2:#7b2ff7">纪</div>
+        <div><h3>蓝色星球</h3><p>深海奇观尽收眼底，震撼自然纪录片佳作。</p></div>
+      </div>
+      <div class="show-item" data-cat="doc">
+        <div class="show-cover" style="--c1:#4caf50;--c2:#ffd54f">纪</div>
+        <div><h3>文明密码</h3><p>追溯千年文明，解读历史背后的故事与智慧。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目四：热播排行 ================= -->
+<section class="section" id="rank">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">热播排行榜</h2>
+      <div class="divider"></div>
+      <p>桃色电影网实时统计，最受观众喜爱的好内容</p>
+    </div>
+    <div style="overflow-x:auto;border-radius:18px">
+      <table class="rank-table">
+        <thead>
+          <tr><th style="width:70px">排名</th><th>片名</th><th>类型</th><th style="width:120px">评分</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="rank-no top">1</span></td><td>长风破浪</td><td>古装权谋</td><td class="score">9.4</td></tr>
+          <tr><td><span class="rank-no top">2</span></td><td>星海迷踪</td><td>科幻冒险</td><td class="score">9.2</td></tr>
+          <tr><td><span class="rank-no top">3</span></td><td>锦绣山河</td><td>历史正剧</td><td class="score">9.3</td></tr>
+          <tr><td><span class="rank-no">4</span></td><td>时光旅人</td><td>剧情</td><td class="score">9.1</td></tr>
+          <tr><td><span class="rank-no">5</span></td><td>暗夜追凶</td><td>悬疑犯罪</td><td class="score">9.0</td></tr>
+          <tr><td><span class="rank-no">6</span></td><td>奇幻森林</td><td>动画</td><td class="score">8.9</td></tr>
+          <tr><td><span class="rank-no">7</span></td><td>笑傲江湖</td><td>喜剧</td><td class="score">8.8</td></tr>
+          <tr><td><span class="rank-no">8</span></td><td>城市边缘</td><td>都市情感</td><td class="score">8.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目五：关于我们 ================= -->
+<section class="section" id="about" style="background:rgba(13,0,21,.4)">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="glow-text">关于桃色电影网</h2>
+        <div class="divider" style="margin:14px 0 0"></div>
+        <p style="margin-top:20px">桃色电影网（https://taosedianyingwang-h5.github.io）致力于打造优质在线影视观赏平台，汇集电影、电视剧、综艺、动漫等丰富内容，每日持续更新，让每一位观众都能轻松找到心仪好片。</p>
+        <p>我们坚持高清画质、极速播放、免费畅享的运营理念，采用移动端自适应技术，在手机、平板、电脑上都能获得一致流畅的观影体验。</p>
+        <div class="stat-row">
+          <div class="stat-box"><b>10000+</b><span>影视资源</span></div>
+          <div class="stat-box"><b>每日</b><span>更新内容</span></div>
+          <div class="stat-box"><b>免费</b><span>在线观看</span></div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="q">「桃色电影网，让好电影触手可及。」</div>
+        <div class="q">「随时随地，多端同步，畅享高清影视。」</div>
+        <div class="q">「每日更新不断，精彩永不落幕。」</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目六：常见问题 ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="glow-text">常见问题</h2>
+      <div class="divider"></div>
+      <p>关于桃色电影网，您想知道的都在这里</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">桃色电影网提供哪些影视内容？<span class="ic">＋</span></button>
+        <div class="faq-a"><p>桃色电影网提供海量高清电影、热播剧集、综艺动漫等丰富影视内容，每日更新，分类清晰，满足不同观众的观影需求。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">桃色电影网的资源是否免费？<span class="ic">＋</span></button>
+        <div class="faq-a"><p>是的，桃色电影网所有影视资源均可免费在线观看，无需付费，注册收藏更便捷。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">支持哪些设备观看？<span class="ic">＋</span></button>
+        <div class="faq-a"><p>桃色电影网采用移动端自适应设计，完美适配手机、平板、电脑等多终端设备，随时随地流畅观看。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">桃色电影网的官方网址是什么？<span class="ic">＋</span></button>
+        <div class="faq-a"><p>桃色电影网的官方网址是 https://taosedianyingwang-h5.github.io，欢迎收藏并持续关注我们的每日更新。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">如何找到想看的内容？<span class="ic">＋</span></button>
+        <div class="faq-a"><p>您可以通过首页分类入口进入电影库、电视剧、综艺动漫等栏目浏览，也可在排行榜中查看当前最热门的影视作品。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site-footer">
+  <div class="foot-wrap">
+    <div class="foot-brand">
+      <a href="#top" class="logo glow-text">桃色电影网</a>
+      <p>桃色电影网（taosedianyingwang-h5.github.io）是您的在线影视首选平台，海量高清电影、热播剧集、综艺动漫每日更新，免费畅享。</p>
+    </div>
+    <div>
+      <h4>观影频道</h4>
+      <ul>
+        <li><a href="#movies">电影库</a></li>
+        <li><a href="#dramas">热播电视剧</a></li>
+        <li><a href="#shows">综艺动漫</a></li>
+        <li><a href="#rank">热播排行榜</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于本站</h4>
+      <ul>
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#">合作联系</a></li>
+        <li><a href="#">网站地图</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关注我们</h4>
+      <ul>
+        <li><a href="#">微信公众</a></li>
+        <li><a href="#">微博官号</a></li>
+        <li><a href="#">官方社群</a></li>
+        <li><a href="#">RSS订阅</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 桃色电影网 taosedianyingwang-h5.github.io · 本站所有影视资源仅供在线观看 · 保留所有权利
+  </div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="返回顶部">↑</button>
+
+<script>
+// 移动端菜单
+var menuBtn=document.getElementById('menuBtn');
+var navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',function(){navLinks.classList.toggle('open')});
+navLinks.addEventListener('click',function(e){if(e.target.tagName==='A')navLinks.classList.remove('open')});
+
+// 平滑滚动（为锚点链接偏移固定导航高度）
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){
+      var el=document.querySelector(id);
+      if(el){
+        e.preventDefault();
+        window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-64,behavior:'smooth'});
+      }
+    }
+  });
+});
+
+// FAQ 折叠
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.parentElement;
+    var open=document.querySelector('.faq-item.open');
+    if(open&&open!==item)open.classList.remove('open');
+    item.classList.toggle('open');
+  });
+});
+
+// 综艺动漫 tab 筛选
+document.querySelectorAll('.show-tabs button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.show-tabs button').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    var cat=btn.dataset.tab;
+    document.querySelectorAll('.show-item').forEach(function(item){
+      item.style.display=(cat==='all'||item.dataset.cat===cat)?'grid':'none';
+    });
+  });
+});
+
+// 返回顶部按钮
+var topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',function(){
+  if(window.scrollY>400)topBtn.classList.add('show');
+  else topBtn.classList.remove('show');
+});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+
+</body>
+</html>
